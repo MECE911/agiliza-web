@@ -1,0 +1,151 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+import Link from "@/components/ui/link.astro";
+
+const features = [
+  {
+    title: "Claridad desde el inicio",
+    desc: "Te explicamos qué se puede hacer, cuánto toma y qué documentos necesitas, sin rodeos.",
+  },
+  {
+    title: "Proceso guiado paso a paso",
+    desc: "Te ayudamos a completar el trámite con una lista clara de tareas y validaciones.",
+  },
+  {
+    title: "Soporte profesional cuando hace falta",
+    desc: "Si tu caso requiere criterio legal o revisión, lo resolvemos contigo de forma simple.",
+  },
+];
+
+const commonTramites = [
+  {
+    title: "Constitución de compañía",
+    desc: "Estructura, requisitos y acompañamiento para crear tu empresa.",
+    href: "/tramites/constitucion",
+  },
+  {
+    title: "Actualizaciones y cambios",
+    desc: "Cambios de administrador, domicilio, objeto social, reformas, etc.",
+    href: "/tramites/actualizaciones",
+  },
+  {
+    title: "Disolución y liquidación",
+    desc: "Cierre ordenado de compañías con pasos claros y documentación correcta.",
+    href: "/tramites/disolucion",
+  },
+  {
+    title: "Permisos y cumplimiento básico",
+    desc: "Lo esencial para operar: registros, obligaciones, y orden administrativo.",
+    href: "/tramites/cumplimiento",
+  },
+];
+---
+
+<Layout title="Trámites">
+  <Container>
+    <!-- HERO (no picture) -->
+    <section class="pt-16 pb-10 md:pt-12 md:pb-14">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold tracking-wide text-slate-500">
+          AGILIZA · TRÁMITES
+        </p>
+
+        <h1 class="mt-3 text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+          Trámites claros, sin vueltas
+        </h1>
+
+        <p class="mt-4 text-lg text-slate-600">
+          Te ayudamos a resolver trámites comunes con orden, documentación correcta y un
+          proceso guiado. Tecnología + criterio profesional, sin complicaciones.
+        </p>
+
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <Link href="/todos-los-tramites" class="flex items-center justify-center">
+            Ver todos los trámites
+          </Link>
+          <Link href="/contacto" style="outline" class="flex items-center justify-center">
+            Hablar por WhatsApp / Contacto
+          </Link>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 FEATURES -->
+    <section class="py-10 md:py-14 border-t border-slate-200/70">
+      <div class="max-w-5xl">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">
+          ¿Cómo trabajamos?
+        </h2>
+        <p class="mt-2 text-slate-600 max-w-2xl">
+          Un enfoque práctico: claridad, pasos y soporte real cuando se necesita.
+        </p>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          {features.map((f) => (
+            <div class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm">
+              <h3 class="text-lg font-semibold text-slate-900">{f.title}</h3>
+              <p class="mt-2 text-slate-600 leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- MOST COMMON TRÁMITES -->
+    <section class="py-10 md:py-14 border-t border-slate-200/70">
+      <div class="max-w-5xl">
+        <div class="flex items-end justify-between gap-4 flex-wrap">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900">
+              Trámites más comunes
+            </h2>
+            <p class="mt-2 text-slate-600 max-w-2xl">
+              Empieza por lo más frecuente. Si tu caso es distinto, también lo vemos.
+            </p>
+          </div>
+
+          <Link href="/todos-los-tramites" style="outline">
+            Ver listado completo
+          </Link>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          {commonTramites.map((t) => (
+            <a
+              href={t.href}
+              class="group rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm hover:shadow-md transition"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-900 group-hover:text-slate-950">
+                    {t.title}
+                  </h3>
+                  <p class="mt-2 text-slate-600 leading-relaxed">{t.desc}</p>
+                </div>
+                <span class="text-slate-400 group-hover:text-slate-600 transition">
+                  →
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <!-- FINAL CTA LINK -->
+        <div class="mt-10 rounded-2xl border border-slate-200/70 bg-slate-50 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-900">
+              ¿Buscas un trámite específico?
+            </h3>
+            <p class="mt-1 text-slate-600">
+              Revisa el catálogo completo y elige el que necesitas.
+            </p>
+          </div>
+          <Link href="/todos-los-tramites" class="flex items-center justify-center">
+            Ir a todos los trámites
+          </Link>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>

@@ -1,0 +1,78 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Container from "@/components/container.astro";
+---
+
+<Layout title="Trámite Común 1">
+  <Container>
+    <!-- HERO (based on your section) -->
+    <section class="bg-white lg:grid lg:h-screen lg:place-content-center">
+      <div class="mx-auto w-screen max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
+        <div class="mx-auto max-w-prose text-center">
+          <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
+            Trámite Común 1
+            <strong class="text-indigo-600"> en Ecuador </strong>
+          </h1>
+
+          <p class="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed">
+            Espera! Tal vez puedes hacerlo tu mismo gratis y sin abogado, sigue las instrucciones abajo y : qué es, para qué sirve, y en qué casos se recomienda hacerlo.
+            (Luego lo afinamos a tu estilo Agiliza.)
+          </p>
+
+          <div class="mt-4 flex justify-center sm:mt-6">
+            <a
+              class="inline-block rounded border border-indigo-600 bg-indigo-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700"
+              href="/contact"
+            >
+              Prefiero hacerlo con un abogado
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: quick info -->
+    <section class="py-12">
+      <div class="mx-auto max-w-5xl">
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border border-black/10 p-6">
+            <h2 class="font-semibold">Tiempo estimado</h2>
+            <p class="mt-2 text-sm text-slate-600">X a Y días (depende del caso).</p>
+          </div>
+
+          <div class="rounded-2xl border border-black/10 p-6">
+            <h2 class="font-semibold">Costo referencial</h2>
+            <p class="mt-2 text-sm text-slate-600">Desde $___ (honorarios + tasas).</p>
+          </div>
+
+          <div class="rounded-2xl border border-black/10 p-6">
+            <h2 class="font-semibold">Qué necesitas</h2>
+            <p class="mt-2 text-sm text-slate-600">Cédula / RUC / documentos X, Y, Z.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: steps -->
+    <section class="pb-16">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="text-2xl font-bold text-gray-900">Cómo funciona</h2>
+        <ol class="mt-4 space-y-3 text-slate-700">
+          <li><span class="font-semibold">1.</span> Revisión rápida del caso (qué aplica y qué no).</li>
+          <li><span class="font-semibold">2.</span> Recolección y validación de documentos.</li>
+          <li><span class="font-semibold">3.</span> Preparación y presentación del trámite.</li>
+          <li><span class="font-semibold">4.</span> Seguimiento hasta resolución.</li>
+        </ol>
+
+        <div class="mt-8">
+          <a
+            href="/contact"
+            class="inline-block rounded-lg border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900"
+          >
+            Prefiero hacerlo con un abogado
+          </a>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>

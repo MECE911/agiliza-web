@@ -14,20 +14,36 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">Quiénes Somos?</Fragment>
+      <Fragment slot="desc">Somos un equipo pequeño pero apasionado por la IA y la tecnología legal.</Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
-      </p>
-    </div>
+   <div class="flex flex-col gap-4 mx-auto max-w-4xl mt-16">
+  <h2 class="font-boAstrold text-3xl text-gray-800">
+    Buscamos ayudar a digitalizar y automatizar el mundo.
+  </h2>
+
+  <p class="text-lg leading-relaxed text-slate-500">
+    Somos un equipo de profesionales que buscamos dar orden y soluciones a personas
+    y organizaciones, promoviendo la automatización e inclusión de IA.
+  </p>
+
+  <p class="text-lg font-medium text-gray-700">
+    Filosofía:
+  </p>
+
+  <ul class="list-disc pl-6 text-lg leading-relaxed text-slate-500 space-y-2">
+    <li>
+      <strong>Hazlo tú mismo:</strong> es posible que con la ayuda de la IA puedas
+      resolver muchas necesidades sin ayuda de un profesional y <strong>gratis</strong>.
+    </li>
+    <li>
+      <strong>Precios claros:</strong> si realmente necesitas ayuda de un profesional,
+      siempre encontrarás el precio marcado, sin sorpresas.
+    </li>
+  </ul>
+</div>
+
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         publishedTeamMembers.map((teamMemberEntry) => (

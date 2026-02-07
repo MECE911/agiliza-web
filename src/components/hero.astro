@@ -1,6 +1,6 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "@/assets/hero.png";
+import heroImage from "@/assets/hero2.png";
 import Link from "@/components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
@@ -11,8 +11,8 @@ import { Icon } from "astro-icon/components";
     <Picture
       src={heroImage}
       alt="Astronaut in the air"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
+      widths={[300, 600, 900, 1200]}
+      sizes="(max-width: 800px) 100vw, 800px"
       loading="eager"
       format="avif"
     />
@@ -20,12 +20,12 @@ import { Icon } from "astro-icon/components";
   <div>
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Marketing website done with Astro
+      Soluciones IA para tu negocio
     </h1>
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Astroship is a starter template for startups, marketing websites & landing
-      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly create
-      any website with this starter.
+      Ayudamos a personas y negocios a organizar, digitalizar y automatizar procesos
+utilizando tecnología e inteligencia artificial de forma práctica y accesible.<wbr /> Diseñamos e implementamos soluciones digitales que permiten a personas y
+empresas trabajar mejor.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
@@ -36,7 +36,7 @@ import { Icon } from "astro-icon/components";
         rel="noopener">
         <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
 
-        Download for Free
+        Contáctanos
       </Link>
       <Link
         size="lg"
@@ -46,7 +46,7 @@ import { Icon } from "astro-icon/components";
         class="flex gap-1 items-center justify-center"
         target="_blank">
         <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
-        GitHub Repo
+        Precios
       </Link>
     </div>
   </div>

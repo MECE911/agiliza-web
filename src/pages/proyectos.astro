@@ -1,0 +1,232 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Proyectos">
+  <!-- HERO (same as Trámite Común 1) -->
+  <section class="bg-white lg:grid lg:h-screen lg:place-content-center">
+    <div class="mx-auto w-screen max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
+      <div class="mx-auto max-w-prose text-center">
+        <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
+          Proyectos
+          <strong class="text-indigo-600"> legales y estratégicos</strong>
+        </h1>
+
+        <p class="mt-4 text-base text-gray-700 sm:text-lg/relaxed">
+          Cuando tu situación no es un trámite estándar, necesitas análisis,
+          criterio y estrategia.
+        </p>
+
+        <div class="mt-4 flex justify-center sm:mt-6">
+          <button
+            id="openContact"
+            type="button"
+            class="inline-block rounded border border-indigo-600 bg-indigo-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700"
+          >
+            Prefiero hablar con un abogado
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECTING OVERLAY -->
+<div
+  id="connectingOverlay"
+  class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-6"
+>
+  <div class="w-full max-w-sm rounded-2xl bg-white p-6 shadow-xl">
+    <p class="text-sm text-gray-500">Agiliza</p>
+    <h3 class="mt-1 text-lg font-semibold text-gray-900">
+      Conectando con un abogado…
+    </h3>
+
+    <div class="mt-4">
+      <div class="h-2 w-full rounded-full bg-gray-200 overflow-hidden">
+        <div id="connectingBar" class="h-2 w-0 bg-indigo-600"></div>
+      </div>
+      <p id="connectingHint" class="mt-3 text-sm text-gray-600">
+        Verificando disponibilidad
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  <!-- POPUP (Dialog) -->
+  <style>
+    #contactDialog {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+      padding: 0;
+      background: transparent;
+    }
+    #contactDialog::backdrop {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+ <dialog id="contactDialog">
+  <div class="p-4">
+    <!-- Card -->
+    <article class="w-full max-w-lg rounded-2xl border border-gray-200 bg-white p-5 shadow-xl">
+      <!-- Header -->
+      <div class="flex items-start justify-between gap-4">
+  <div class="flex items-center gap-4">
+    <img
+      alt="Miguel Coronel"
+      src="/miguel-coronel.jpg"
+      class="w-16 h-16 rounded-full object-cover border border-gray-200"
+    />
+
+    <div>
+      <h3 class="text-lg font-medium text-gray-900">Miguel Coronel</h3>
+      <p class="text-sm text-gray-500">Abogado — Agiliza</p>
+
+      <div class="mt-3 flex flex-wrap gap-2">
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/593XXXXXXXXX?text=Hola%20Miguel%2C%20quiero%20hablar%20sobre%20un%20proyecto%20legal."
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center rounded-full bg-green-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-green-700"
+        >
+          WhatsApp
+        </a>
+
+        <!-- Email -->
+        <a
+          href="mailto:tuemail@dominio.com"
+          class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-200"
+        >
+          Email
+        </a>
+
+        <!-- Optional: Phone -->
+        <a
+          href="tel:+593XXXXXXXXX"
+          class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-200"
+        >
+          Llamar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Close -->
+  <button
+    id="closeContact"
+    type="button"
+    aria-label="Cerrar"
+    class="rounded-full border border-gray-200 bg-gray-100 px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-200"
+  >
+    ✕
+  </button>
+</div>
+
+
+      <!-- Body -->
+      <ul class="mt-5 space-y-3">
+        <li>
+          <a href="/contact" class="block rounded-xl border border-gray-200 p-4 hover:border-indigo-600 transition-colors">
+            <strong class="font-medium text-gray-900">Project A</strong>
+            <p class="mt-1 text-sm text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime consequuntur deleniti, unde ab ut in!
+            </p>
+          </a>
+        </li>
+
+        <li>
+          <a href="/contact" class="block rounded-xl border border-gray-200 p-4 hover:border-indigo-600 transition-colors">
+            <strong class="font-medium text-gray-900">Project B</strong>
+            <p class="mt-1 text-sm text-gray-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente cumque saepe sit.
+            </p>
+          </a>
+        </li>
+      </ul>
+    </article>
+  </div>
+</dialog>
+
+
+  <script>
+  const dialog = document.getElementById("contactDialog");
+  const openBtn = document.getElementById("openContact");
+  const closeBtn = document.getElementById("closeContact");
+
+  const overlay = document.getElementById("connectingOverlay");
+  const bar = document.getElementById("connectingBar");
+  const hint = document.getElementById("connectingHint");
+
+  let connectTimer1, connectTimer2, connectTimer3;
+
+  function resetConnectingUI() {
+    if (bar) bar.style.width = "0%";
+    if (hint) hint.textContent = "Verificando disponibilidad";
+    [connectTimer1, connectTimer2, connectTimer3].forEach((t) => t && clearTimeout(t));
+  }
+
+  function showConnectingThenDialog() {
+    resetConnectingUI();
+
+    // Show overlay
+    overlay?.classList.remove("hidden");
+    overlay?.classList.add("flex");
+
+    // Disable button to prevent double-clicks
+    if (openBtn) openBtn.disabled = true;
+
+    // Fake progress + messages (credible but fast)
+   connectTimer1 = setTimeout(() => {
+  if (bar) bar.style.width = "20%";
+  if (hint) hint.textContent = "Analizando tu solicitud";
+}, 600);
+
+connectTimer2 = setTimeout(() => {
+  if (bar) bar.style.width = "45%";
+  if (hint) hint.textContent = "Verificando disponibilidad";
+}, 1500);
+
+connectTimer3 = setTimeout(() => {
+  if (bar) bar.style.width = "70%";
+  if (hint) hint.textContent = "Asignando abogado";
+}, 2600);
+
+connectTimer4 = setTimeout(() => {
+  if (bar) bar.style.width = "100%";
+
+  overlay?.classList.add("hidden");
+  overlay?.classList.remove("flex");
+
+  if (openBtn) openBtn.disabled = false;
+  dialog?.showModal();
+}, 4000);
+  }
+
+  openBtn?.addEventListener("click", showConnectingThenDialog);
+
+  closeBtn?.addEventListener("click", () => dialog?.close());
+
+  // Close on backdrop click
+  dialog?.addEventListener("click", (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+
+  // Nice UX: return focus
+  dialog?.addEventListener("close", () => openBtn?.focus());
+
+  // Optional: allow closing overlay with Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay && !overlay.classList.contains("hidden")) {
+      overlay.classList.add("hidden");
+      overlay.classList.remove("flex");
+      if (openBtn) openBtn.disabled = false;
+      resetConnectingUI();
+    }
+  });
+</script>
+
+</Layout>

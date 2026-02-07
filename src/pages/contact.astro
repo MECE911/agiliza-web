@@ -9,35 +9,55 @@ import { Icon } from "astro-icon/components";
 <Layout title="Contact">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Contact</Fragment>
-      <Fragment slot="desc">We are a here to help.</Fragment>
+      <Fragment slot="title">Contacto</Fragment>
+      <Fragment slot="desc">Estamos para ayudarte.</Fragment>
     </Sectionhead>
 
     <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <!-- Left: contact info -->
       <div>
-        <h2 class="font-medium text-2xl text-gray-800">Contact Astroship</h2>
+        <h2 class="font-medium text-2xl text-gray-800">
+          Contáctanos
+        </h2>
+
         <p class="text-lg leading-relaxed text-slate-500 mt-3">
-          Have something to say? We are here to help. Fill up the form or send
-          email or call phone.
+          Tienes algo que decirnos? Agenda una reunión o contáctanos directamente.
         </p>
-        <div class="mt-5">
-          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+
+        <div class="mt-5 space-y-2 text-gray-600">
+          <div class="flex items-center space-x-2">
             <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>1734 Sanfransico, CA 93063</span>
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
-              href="mailto:hello@astroshipstarter.com"
-              >hello@astroshipstarter.com</a
-            >
-          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
-            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
-              href="tel:+1 (987) 4587 899">+1 (987) 4587 899</a
-            >
+            <span>Ibarra, Ecuador</span>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />
+            <a href="mailto:hello@astroshipstarter.com">
+              info@agilizasoluciones.org
+            </a>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+            <a href="tel:+19874587899">
+              0984897480
+            </a>
           </div>
         </div>
       </div>
+
+      <!-- Right: booking calendar -->
       <div>
-        <Contactform />
+        <h3 class="font-medium text-xl text-gray-800 mb-3">
+          Agenda una reunión
+        </h3>
+
+        <iframe
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3bAy0mwmJQG6ogKaTOIW021IewIfkulk8A4CwO3bfJYqWpqmGVceoIF4xmHbzQ7MMRiDkz0rfB"
+          class="w-full h-[700px] border-0 rounded-md"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </Container>

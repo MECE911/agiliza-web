@@ -1,0 +1,124 @@
+---
+import Layout from "../layouts/Layout.astro"; // adjust if your layout path/name is different
+import Container from "../components/container.astro";
+
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const services = [
+  {
+    title: "Websites (WordPress / Astro)",
+    description:
+      "Fast marketing sites, landing pages, blogs, and SEO-ready pages for local businesses.",
+    icon: "bx:bxs-layout",
+    href: "/servicios-digitales/websites",
+  },
+  {
+    title: "Client Portal (React + Firebase)",
+    description:
+      "Login + dashboards so clients can see documents, progress, and updates in one place.",
+    icon: "bx:bxs-dashboard",
+    href: "/servicios-digitales/portal",
+  },
+  {
+    title: "Automation (Zapier / Make)",
+    description:
+      "Automate repetitive tasks: forms → WhatsApp/email, CRM updates, reminders, invoices.",
+    icon: "bx:bxs-cog",
+    href: "/servicios-digitales/automatizacion",
+  },
+  {
+    title: "E-commerce (Shopify)",
+    description:
+      "Online store setup, products, collections, payments, shipping, and basic integrations.",
+    icon: "bx:bxs-store",
+    href: "/servicios-digitales/ecommerce",
+  },
+  {
+    title: "AI Content & Workflows",
+    description:
+      "Content systems, templates, and AI-assisted workflows to save time without losing quality.",
+    icon: "bx:bxs-brain",
+    href: "/servicios-digitales/ai",
+  },
+  {
+    title: "Maintenance & Support",
+    description:
+      "Updates, backups, small changes, performance improvements, and ongoing support.",
+    icon: "bx:bxs-wrench",
+    href: "/servicios-digitales/soporte",
+  },
+];
+---
+
+<Layout title="Servicios Digitales">
+  <Container>
+    <section class="py-16">
+      <div class="max-w-3xl">
+        <p class="text-sm opacity-70">Agiliza</p>
+        <h1 class="text-3xl font-semibold tracking-tight mt-2">
+          Servicios Digitales
+        </h1>
+        <p class="mt-4 text-base opacity-80">
+          Practical digital services for small businesses: websites, portals, automation, and e-commerce.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            href="/contact"
+            class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium bg-black text-white"
+          >
+            Request a quote
+          </a>
+          <a
+            href="/pricing"
+            class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium border border-black/15"
+          >
+            View pricing
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((s) => (
+          <a
+            href={s.href}
+            class="group rounded-2xl border border-black/10 p-5 hover:border-black/25 transition"
+          >
+            <div class="flex items-start gap-3">
+              <div class="rounded-xl border border-black/10 p-2">
+                <Icon name={s.icon} class="h-6 w-6" />
+              </div>
+
+              <div>
+                <h2 class="text-base font-semibold group-hover:underline">
+                  {s.title}
+                </h2>
+                <p class="mt-2 text-sm opacity-80">
+                  {s.description}
+                </p>
+
+                <p class="mt-4 text-sm font-medium opacity-80">
+                  Learn more →
+                </p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-14 rounded-2xl border border-black/10 p-6">
+        <h3 class="text-lg font-semibold">Not sure what you need?</h3>
+        <p class="mt-2 text-sm opacity-80">
+          Tell me your business and goal. I’ll recommend the simplest stack (WordPress/Astro/React) that gets results.
+        </p>
+        <a
+          href="/contact"
+          class="mt-4 inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium border border-black/15"
+        >
+          Contact
+        </a>
+      </div>
+    </section>
+  </Container>
+</Layout>

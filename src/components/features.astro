@@ -4,51 +4,41 @@ import { Icon } from "astro-icon/components";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
-    description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+    title: "Servicios Digitales",
+    description: `
+      COnstruye tu sitio usando React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.
+      Consulta todos nuestros servicios haciendo click
+      <a href="/servicios-digitales" class="underline font-medium">aquí</a>
+    `,
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "100% Static HTML, No JS",
-    description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+    title: "Trámites Legales",
+    items: [
+      { label: "- Constitute una SAS.", href: "/tramites/tramite-comun-1" },
+      { label: "- Registra tu marca.", href: "/tramites/tramite-comun-2" },
+      { label: "- Trámite Común 3", href: "/tramites/tramite-comun-3" },
+      { label: "Todos los trámites", href: "/todos-los-tramites" },
+    ],
     icon: "bx:bxs-window-alt",
   },
   {
-    title: "On-Demand Components",
+    title: "Casos Jurídicos",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+      "Asesoría legal personalizada? Hazlo tu mismo o contacta un abogado real que te ayudará con tu caso haciendo click aquí.",
     icon: "bx:bxs-data",
-  },
-  {
-    title: "Broad Integration",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Todo lo que necesitas para modernizar tu negocio
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    Creemos que muchas soluciones pueden hacerse por uno mismo con la ayuda de la
+tecnología.
+
   </p>
 </div>
 
@@ -60,8 +50,30 @@ const features = [
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <h3 class="font-semibold text-lg">{item.title}</h3>
+
+          {item.description && (
+  <p
+    class="text-slate-500 mt-2 leading-relaxed"
+    set:html={item.description}
+  />
+)}
+
+
+          {item.items && (
+            <ul class="mt-2 space-y-1">
+              {item.items.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    class="text-slate-500 hover:text-blue-600 hover:underline"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     ))

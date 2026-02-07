@@ -6,21 +6,21 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: "Features",
+    title: "Servicios",
     path: "#",
     children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
+      { title: "Trámites", path: "/tramites" },
+      { title: "Servicios Digitales", path: "/servicios-digitales" },
+      { title: "Casos Jurídicos", path: "/proyectos" },
+      { title: "Mediación", path: "/mediacion" },
     ],
   },
   {
-    title: "Pricing",
+    title: "Precios",
     path: "/pricing",
   },
   {
-    title: "About",
+    title: "Acerca De",
     path: "/about",
   },
   {
@@ -28,13 +28,8 @@ const menuitems = [
     path: "/blog",
   },
   {
-    title: "Contact",
+    title: "Contacto",
     path: "/contact",
-  },
-  {
-    title: "Pro Version",
-    badge: true,
-    path: "https://astroship-pro.web3templates.com/",
   },
 ];
 ---
@@ -43,11 +38,13 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
-          >
-        </a>
+        <a href="/" class="flex items-center">
+  <img
+    src="/agilizalogoparaastro.png"
+    alt="Agiliza"
+    class="h-16 w-auto"
+  />
+</a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
         </div>
@@ -84,15 +81,19 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
-        </div>
+  <Link href="https://app.agilizasoluciones.org" style="muted" block size="md">
+    Ingresar
+  </Link>
+  <Link href="https://app.agilizasoluciones.org" size="md" block>
+    Registro
+  </Link>
+</div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
+        <a href="https://app.agilizasoluciones.org">Log in</a>
+        <Link href="https://app.agilizasoluciones.org" size="md">Registro</Link>
       </div>
     </div>
   </header>
