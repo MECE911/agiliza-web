@@ -1,151 +1,203 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Container from "@/components/container.astro";
-import Link from "@/components/ui/link.astro";
 
-const features = [
+const categories = [
   {
-    title: "Claridad desde el inicio",
-    desc: "Te explicamos qué se puede hacer, cuánto toma y qué documentos necesitas, sin rodeos.",
+    id: "societario",
+    name: "Derecho societario / empresarial",
+    services: [
+      {
+        name: "Constitución de compañías (SAS / Cía. Ltda.)",
+        desc: "Creamos tu empresa legalmente constituida, lista para operar.",
+        price: "$60",
+      },
+      {
+        name: "Transformación societaria",
+        desc: "Cambia la forma jurídica de tu empresa de manera segura.",
+        price: "$90",
+      },
+      {
+        name: "Reformas de estatutos sociales",
+        desc: "Actualiza el marco legal de tu empresa con reformas precisas.",
+        price: "$60",
+      },
+      {
+        name: "Disolución y liquidación de compañías",
+        desc: "Cierra tu empresa siguiendo todos los pasos legales requeridos.",
+        price: "$110",
+      },
+      {
+        name: "Conflictos entre socios / salida de socio",
+        desc: "Resolvemos disputas societarias y gestionamos la salida de socios.",
+        price: "$125",
+      },
+      {
+        name: "Fusiones o reorganizaciones empresariales",
+        desc: "Asesoramos en procesos de fusión y reestructuración corporativa.",
+        price: "$200",
+      },
+    ],
   },
   {
-    title: "Proceso guiado paso a paso",
-    desc: "Te ayudamos a completar el trámite con una lista clara de tareas y validaciones.",
+    id: "civil",
+    name: "Derecho civil y patrimonial",
+    services: [
+      {
+        name: "Compra-venta de bienes inmuebles con asesoría legal",
+        desc: "Aseguramos que tu transacción inmobiliaria sea válida y libre de riesgos.",
+        price: "$90",
+      },
+      {
+        name: "Promesas de compra-venta y negociación contractual",
+        desc: "Redactamos y revisamos contratos preliminares para proteger tu inversión.",
+        price: "$60",
+      },
+      {
+        name: "Prescripción adquisitiva de dominio (usucapión)",
+        desc: "Formalizamos la propiedad de bienes poseídos por años de forma legítima.",
+        price: "$175",
+      },
+      {
+        name: "División de bienes / partición hereditaria",
+        desc: "Gestionamos la distribución justa de bienes entre herederos o copropietarios.",
+        price: "$150",
+      },
+      {
+        name: "Conflictos de propiedad o linderos",
+        desc: "Defendemos tus derechos sobre la propiedad ante disputas o invasiones.",
+        price: "$125",
+      },
+      {
+        name: "Cobro judicial de deudas (proceso ejecutivo)",
+        desc: "Recuperamos deudas pendientes a través de la vía legal más eficiente.",
+        price: "$100",
+      },
+    ],
   },
   {
-    title: "Soporte profesional cuando hace falta",
-    desc: "Si tu caso requiere criterio legal o revisión, lo resolvemos contigo de forma simple.",
+    id: "familia",
+    name: "Derecho de familia",
+    services: [
+      {
+        name: "Divorcio por mutuo consentimiento",
+        desc: "Acompañamos el proceso de divorcio de común acuerdo de forma ágil.",
+        price: "$60",
+      },
+      {
+        name: "Divorcio contencioso",
+        desc: "Representamos tus intereses cuando el divorcio es disputado.",
+        price: "$175",
+      },
+      {
+        name: "Juicio de alimentos para hijos",
+        desc: "Garantizamos el derecho alimentario de tus hijos ante la justicia.",
+        price: "$75",
+      },
+      {
+        name: "Régimen de visitas y tenencia",
+        desc: "Establecemos acuerdos claros sobre la custodia y visitas de tus hijos.",
+        price: "$90",
+      },
+      {
+        name: "Liquidación de sociedad conyugal",
+        desc: "Dividimos los bienes del matrimonio de forma equitativa y legal.",
+        price: "$150",
+      },
+    ],
   },
-];
-
-const commonTramites = [
   {
-    title: "Constitución de compañía",
-    desc: "Estructura, requisitos y acompañamiento para crear tu empresa.",
-    href: "/tramites/constitucion",
-  },
-  {
-    title: "Actualizaciones y cambios",
-    desc: "Cambios de administrador, domicilio, objeto social, reformas, etc.",
-    href: "/tramites/actualizaciones",
-  },
-  {
-    title: "Disolución y liquidación",
-    desc: "Cierre ordenado de compañías con pasos claros y documentación correcta.",
-    href: "/tramites/disolucion",
-  },
-  {
-    title: "Permisos y cumplimiento básico",
-    desc: "Lo esencial para operar: registros, obligaciones, y orden administrativo.",
-    href: "/tramites/cumplimiento",
+    id: "laboral",
+    name: "Derecho laboral",
+    services: [
+      {
+        name: "Visto bueno laboral",
+        desc: "Tramitamos el visto bueno ante la autoridad laboral competente.",
+        price: "$75",
+      },
+      {
+        name: "Demanda por despido intempestivo",
+        desc: "Reclamamos tus derechos cuando fuiste despedido sin causa legal.",
+        price: "$110",
+      },
+      {
+        name: "Negociación o liquidación de conflictos laborales",
+        desc: "Mediamos y resolvemos diferencias laborales de forma extrajudicial.",
+        price: "$60",
+      },
+    ],
   },
 ];
 ---
 
-<Layout title="Trámites">
-  <Container>
-    <!-- HERO (no picture) -->
-    <section class="pt-16 pb-10 md:pt-12 md:pb-14">
-      <div class="max-w-3xl">
-        <p class="text-sm font-semibold tracking-wide text-slate-500">
-          AGILIZA · TRÁMITES
+<Layout title="Servicios legales">
+  <main class="py-16 px-4">
+    <Container>
+      <!-- Header -->
+      <div class="max-w-2xl mb-14">
+        <p class="text-sm font-semibold uppercase tracking-widest text-[#F15D2D] mb-3">
+          Nuestros servicios
         </p>
-
-        <h1 class="mt-3 text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
-          Trámites claros, sin vueltas
+        <h1 class="text-4xl font-bold text-gray-900 leading-tight mb-4">
+          Asesoría legal accesible para todos
         </h1>
-
-        <p class="mt-4 text-lg text-slate-600">
-          Te ayudamos a resolver trámites comunes con orden, documentación correcta y un
-          proceso guiado. Tecnología + criterio profesional, sin complicaciones.
+        <p class="text-lg text-gray-500 leading-relaxed">
+          En Agiliza Soluciones aplicamos <strong class="text-gray-700">honorarios sociales</strong>:
+          tarifas justas y transparentes para que el acceso a la justicia no dependa
+          de tu presupuesto. Encuentra tu trámite, conoce el costo y comienza hoy.
         </p>
-
-        <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <Link href="/todos-los-tramites" class="flex items-center justify-center">
-            Ver todos los trámites
-          </Link>
-          <Link href="/contacto" style="outline" class="flex items-center justify-center">
-            Hablar por WhatsApp / Contacto
-          </Link>
-        </div>
       </div>
-    </section>
 
-    <!-- 3 FEATURES -->
-    <section class="py-10 md:py-14 border-t border-slate-200/70">
-      <div class="max-w-5xl">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">
-          ¿Cómo trabajamos?
-        </h2>
-        <p class="mt-2 text-slate-600 max-w-2xl">
-          Un enfoque práctico: claridad, pasos y soporte real cuando se necesita.
-        </p>
-
-        <div class="mt-8 grid gap-6 md:grid-cols-3">
-          {features.map((f) => (
-            <div class="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm">
-              <h3 class="text-lg font-semibold text-slate-900">{f.title}</h3>
-              <p class="mt-2 text-slate-600 leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- MOST COMMON TRÁMITES -->
-    <section class="py-10 md:py-14 border-t border-slate-200/70">
-      <div class="max-w-5xl">
-        <div class="flex items-end justify-between gap-4 flex-wrap">
-          <div>
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-900">
-              Trámites más comunes
-            </h2>
-            <p class="mt-2 text-slate-600 max-w-2xl">
-              Empieza por lo más frecuente. Si tu caso es distinto, también lo vemos.
-            </p>
+      <!-- Categories -->
+      {categories.map((cat) => (
+        <section class="mb-16" id={cat.id}>
+          <div class="flex items-center gap-4 mb-6">
+            <h2 class="text-xl font-semibold text-gray-900">{cat.name}</h2>
+            <div class="flex-1 h-px bg-gray-200"></div>
           </div>
 
-          <Link href="/todos-los-tramites" style="outline">
-            Ver listado completo
-          </Link>
-        </div>
-
-        <div class="mt-8 grid gap-6 md:grid-cols-2">
-          {commonTramites.map((t) => (
-            <a
-              href={t.href}
-              class="group rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm hover:shadow-md transition"
-            >
-              <div class="flex items-start justify-between gap-4">
-                <div>
-                  <h3 class="text-lg font-semibold text-slate-900 group-hover:text-slate-950">
-                    {t.title}
-                  </h3>
-                  <p class="mt-2 text-slate-600 leading-relaxed">{t.desc}</p>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {cat.services.map((svc) => (
+              <div class="group flex flex-col bg-white border border-gray-200 rounded-xl p-5 hover:border-[#F15D2D] hover:shadow-md transition-all duration-200">
+                <h3 class="font-semibold text-gray-900 text-base leading-snug mb-2">
+                  {svc.name}
+                </h3>
+                <p class="text-sm text-gray-500 leading-relaxed flex-1 mb-4">
+                  {svc.desc}
+                </p>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
+                  <span class="text-sm text-gray-400">
+                    Desde <span class="text-lg font-bold text-gray-800">{svc.price}</span>
+                  </span>
+                  <a
+                    href="/contact"
+                    class="inline-flex items-center gap-1 text-sm font-medium bg-[#F15D2D] text-white px-3 py-1.5 rounded-lg hover:bg-[#d94f23] transition-colors whitespace-nowrap"
+                  >
+                    Iniciar trámite
+                  </a>
                 </div>
-                <span class="text-slate-400 group-hover:text-slate-600 transition">
-                  →
-                </span>
               </div>
-            </a>
-          ))}
-        </div>
-
-        <!-- FINAL CTA LINK -->
-        <div class="mt-10 rounded-2xl border border-slate-200/70 bg-slate-50 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <div>
-            <h3 class="text-lg font-semibold text-slate-900">
-              ¿Buscas un trámite específico?
-            </h3>
-            <p class="mt-1 text-slate-600">
-              Revisa el catálogo completo y elige el que necesitas.
-            </p>
+            ))}
           </div>
-          <Link href="/todos-los-tramites" class="flex items-center justify-center">
-            Ir a todos los trámites
-          </Link>
-        </div>
-      </div>
-    </section>
-  </Container>
+        </section>
+      ))}
+
+      <!-- CTA bottom -->
+      <section class="mt-4 mb-8 rounded-2xl bg-gray-50 border border-gray-200 px-8 py-10 text-center">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">
+          ¿No encuentras tu servicio?
+        </h2>
+        <p class="text-gray-500 mb-6 max-w-md mx-auto">
+          Cuéntanos tu caso y te orientamos sin compromiso. Atendemos cualquier
+          consulta legal, aunque no esté en esta lista.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 bg-[#F15D2D] text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#d94f23] transition-colors"
+        >
+          Contáctanos
+        </a>
+      </section>
+    </Container>
+  </main>
 </Layout>

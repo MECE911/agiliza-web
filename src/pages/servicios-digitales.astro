@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro"; // adjust if your layout path/name is different
+import Layout from "../layouts/Layout.astro";
 import Container from "../components/container.astro";
 
 // @ts-ignore
@@ -7,44 +7,44 @@ import { Icon } from "astro-icon/components";
 
 const services = [
   {
-    title: "Websites (WordPress / Astro)",
+    title: "Sitios web (WordPress / Astro)",
     description:
-      "Fast marketing sites, landing pages, blogs, and SEO-ready pages for local businesses.",
+      "Sitios de marketing rapidos, landing pages, blogs y paginas optimizadas para SEO para negocios locales.",
     icon: "bx:bxs-layout",
     href: "/servicios-digitales/websites",
   },
   {
-    title: "Client Portal (React + Firebase)",
+    title: "Portal de clientes (React + Firebase)",
     description:
-      "Login + dashboards so clients can see documents, progress, and updates in one place.",
+      "Acceso con login y paneles para que tus clientes vean documentos, avances y novedades en un solo lugar.",
     icon: "bx:bxs-dashboard",
     href: "/servicios-digitales/portal",
   },
   {
-    title: "Automation (Zapier / Make)",
+    title: "Automatizacion (Zapier / Make)",
     description:
-      "Automate repetitive tasks: forms → WhatsApp/email, CRM updates, reminders, invoices.",
+      "Automatiza tareas repetitivas: formularios -> WhatsApp/email, actualizaciones de CRM, recordatorios y facturas.",
     icon: "bx:bxs-cog",
     href: "/servicios-digitales/automatizacion",
   },
   {
-    title: "E-commerce (Shopify)",
+    title: "Comercio electronico (Shopify)",
     description:
-      "Online store setup, products, collections, payments, shipping, and basic integrations.",
+      "Configuracion de tienda online, productos, colecciones, pagos, envios e integraciones basicas.",
     icon: "bx:bxs-store",
     href: "/servicios-digitales/ecommerce",
   },
   {
-    title: "AI Content & Workflows",
+    title: "Contenido con IA y flujos de trabajo",
     description:
-      "Content systems, templates, and AI-assisted workflows to save time without losing quality.",
+      "Sistemas de contenido, plantillas y flujos asistidos con IA para ahorrar tiempo sin perder calidad.",
     icon: "bx:bxs-brain",
     href: "/servicios-digitales/ai",
   },
   {
-    title: "Maintenance & Support",
+    title: "Mantenimiento y soporte",
     description:
-      "Updates, backups, small changes, performance improvements, and ongoing support.",
+      "Actualizaciones, respaldos, cambios menores, mejoras de rendimiento y soporte continuo.",
     icon: "bx:bxs-wrench",
     href: "/servicios-digitales/soporte",
   },
@@ -55,26 +55,26 @@ const services = [
   <Container>
     <section class="py-16">
       <div class="max-w-3xl">
-        <p class="text-sm opacity-70">Agiliza</p>
+        <p class="text-sm font-semibold text-[#F15D2D]">Agiliza</p>
         <h1 class="text-3xl font-semibold tracking-tight mt-2">
           Servicios Digitales
         </h1>
         <p class="mt-4 text-base opacity-80">
-          Practical digital services for small businesses: websites, portals, automation, and e-commerce.
+          Servicios digitales practicos para pequenas empresas: sitios web, portales, automatizacion y comercio electronico.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3">
           <a
             href="/contact"
-            class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium bg-black text-white"
+            class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium bg-[#F15D2D] text-white hover:bg-[#d94f23] transition-colors"
           >
-            Request a quote
+            Solicitar cotizacion
           </a>
           <a
             href="/pricing"
-            class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium border border-black/15"
+            class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium border border-[#F15D2D] text-[#F15D2D] hover:bg-[#fff2ed] transition-colors"
           >
-            View pricing
+            Ver precios
           </a>
         </div>
       </div>
@@ -83,15 +83,15 @@ const services = [
         {services.map((s) => (
           <a
             href={s.href}
-            class="group rounded-2xl border border-black/10 p-5 hover:border-black/25 transition"
+            class="group rounded-2xl border border-black/10 p-5 hover:border-[#F15D2D] transition"
           >
             <div class="flex items-start gap-3">
-              <div class="rounded-xl border border-black/10 p-2">
+              <div class="rounded-xl border border-black/10 p-2 group-hover:border-[#F15D2D] transition-colors">
                 <Icon name={s.icon} class="h-6 w-6" />
               </div>
 
               <div>
-                <h2 class="text-base font-semibold group-hover:underline">
+                <h2 class="text-base font-semibold group-hover:text-[#F15D2D] group-hover:underline transition-colors">
                   {s.title}
                 </h2>
                 <p class="mt-2 text-sm opacity-80">
@@ -99,7 +99,7 @@ const services = [
                 </p>
 
                 <p class="mt-4 text-sm font-medium opacity-80">
-                  Learn more →
+                  Saber mas ->
                 </p>
               </div>
             </div>
@@ -108,15 +108,15 @@ const services = [
       </div>
 
       <div class="mt-14 rounded-2xl border border-black/10 p-6">
-        <h3 class="text-lg font-semibold">Not sure what you need?</h3>
+        <h3 class="text-lg font-semibold">No estas seguro de lo que necesitas?</h3>
         <p class="mt-2 text-sm opacity-80">
-          Tell me your business and goal. I’ll recommend the simplest stack (WordPress/Astro/React) that gets results.
+          Cuentame sobre tu negocio y objetivo. Te recomiendo el stack mas simple (WordPress/Astro/React) que genere resultados.
         </p>
         <a
           href="/contact"
-          class="mt-4 inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium border border-black/15"
+          class="mt-4 inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium border border-[#F15D2D] text-[#F15D2D] hover:bg-[#fff2ed] transition-colors"
         >
-          Contact
+          Contacto
         </a>
       </div>
     </section>

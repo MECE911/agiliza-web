@@ -1,6 +1,4 @@
 ---
-import { Picture } from "astro:assets";
-import heroImage from "@/assets/hero2.png";
 import Link from "@/components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
@@ -8,13 +6,11 @@ import { Icon } from "astro-icon/components";
 <main
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={heroImage}
+    <img
+      src="/hero.jpg"
       alt="Astronaut in the air"
-      widths={[300, 600, 900, 1200]}
-      sizes="(max-width: 800px) 100vw, 800px"
       loading="eager"
-      format="avif"
+      class="w-full h-auto rounded-3xl shadow-xl ring-1 ring-slate-200 object-cover"
     />
   </div>
   <div>
@@ -34,7 +30,7 @@ empresas trabajar mejor.
         target="_blank"
         class="flex gap-1 items-center justify-center"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+        <Icon class="text-white w-5 h-5" name="bx:bxs-envelope" />
 
         Contáctanos
       </Link>
@@ -45,7 +41,7 @@ empresas trabajar mejor.
         href="https://github.com/surjithctly/astroship"
         class="flex gap-1 items-center justify-center"
         target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+        <Icon class="text-black w-4 h-4" name="bx:bxs-purchase-tag" />
         Precios
       </Link>
     </div>

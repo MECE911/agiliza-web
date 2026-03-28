@@ -3,23 +3,115 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<section class="mt-24">
-  <h2 class="text-center text-slate-500">
+<section>
+  <h2 class="text-center text-slate-500 mb-10">
     Trabajamos con tecnología de punta
   </h2>
 
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-    <!-- Frontend / Web -->
-    <Icon class="size-8 md:size-12" name="simple-icons:react" />
-    <Icon class="size-8 md:size-12" name="simple-icons:astro" />
-    <Icon class="size-8 md:size-16" name="simple-icons:tailwindcss" />
-
-    <!-- Legal / AI tools -->
-    <img
-      src="/logos/lexisnexis-logo.svg"
-      alt="LexisNexis"
-      class="h-8 md:h-12 opacity-70 grayscale"
-      loading="lazy"
-    />
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <!-- Original set -->
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-12" name="simple-icons:react" />
+      </div>
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-12" name="simple-icons:astro" />
+      </div>
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-16" name="simple-icons:tailwindcss" />
+      </div>
+      <div class="marquee-item">
+        <img
+          src="/logos/lexisnexis-logo.svg"
+          alt="LexisNexis"
+          class="h-8 md:h-12 opacity-70 grayscale"
+          loading="lazy"
+        />
+      </div>
+      <!-- Duplicate set 2 -->
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-12" name="simple-icons:react" />
+      </div>
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-12" name="simple-icons:astro" />
+      </div>
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-16" name="simple-icons:tailwindcss" />
+      </div>
+      <div class="marquee-item">
+        <img
+          src="/logos/lexisnexis-logo.svg"
+          alt="LexisNexis"
+          class="h-8 md:h-12 opacity-70 grayscale"
+          loading="lazy"
+        />
+      </div>
+      <!-- Duplicate set 3 -->
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-12" name="simple-icons:react" />
+      </div>
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-12" name="simple-icons:astro" />
+      </div>
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-16" name="simple-icons:tailwindcss" />
+      </div>
+      <div class="marquee-item">
+        <img
+          src="/logos/lexisnexis-logo.svg"
+          alt="LexisNexis"
+          class="h-8 md:h-12 opacity-70 grayscale"
+          loading="lazy"
+        />
+      </div>
+      <!-- Duplicate set 4 -->
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-12" name="simple-icons:react" />
+      </div>
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-12" name="simple-icons:astro" />
+      </div>
+      <div class="marquee-item">
+        <Icon class="size-8 md:size-16" name="simple-icons:tailwindcss" />
+      </div>
+      <div class="marquee-item">
+        <img
+          src="/logos/lexisnexis-logo.svg"
+          alt="LexisNexis"
+          class="h-8 md:h-12 opacity-70 grayscale"
+          loading="lazy"
+        />
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+  .marquee-wrapper {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: marquee 18s linear infinite;
+  }
+
+  .marquee-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-25%); }
+  }
+
+  .marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+  }
+</style>
