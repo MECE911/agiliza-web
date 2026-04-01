@@ -1,37 +1,143 @@
 ---
 draft: false
-title: " Introduction to the Essential Data Structures & Algorithms"
-snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
+title: "Arquitecturas actuales de inteligencia artificial aplicadas a flujos legales estructurados"
+snippet: "Los modelos de lenguaje actuales ofrecen capacidades relevantes para el trabajo jurídico, pero su uso efectivo depende de arquitecturas híbridas que compensen sus limitaciones estructurales."
 image: {
-    src: "https://images.unsplash.com/photo-1627163439134-7a8c47e08208?&fit=crop&w=430&h=240",
-    alt: "data structures & algorithms"
+    src: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?&fit=crop&w=430&h=240",
+    alt: "inteligencia artificial y derecho"
 }
-publishDate: "2022-11-09 16:39"
-category: "Courses"
-author: "Marcell Ziemann"
-tags: [webdev, tailwindcss, frontend]
+publishDate: "2025-03-30 10:00"
+category: "Tecnología Legal"
+author: "Agiliza Soluciones"
+tags: [ia, legal, automatizacion]
 ---
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit euismod rutrum, consequat fringilla ultricies nullam curae mollis semper conubia viverra, orci aenean dapibus pharetra nec tortor tellus cubilia. Ullamcorper mi lectus eu malesuada tempor massa praesent magna mattis posuere, lobortis vulputate ut duis magnis parturient habitant nibh id tristique, quis suspendisse donec nisl penatibus sem non feugiat taciti. Mollis per ridiculus integer cursus semper vestibulum fermentum penatibus cubilia blandit scelerisque, tempus platea leo posuere ac pharetra volutpat aliquet euismod id ullamcorper lobortis, urna est magna mus rhoncus massa curae libero praesent eget. Mattis malesuada vestibulum quis ac nam phasellus suscipit facilisis libero diam posuere, cursus massa vehicula neque imperdiet tincidunt dui egestas lacinia mollis aliquet orci, nisl curabitur dapibus litora dis cum nostra montes ligula praesent. Facilisi aliquam convallis molestie tempor blandit ultricies bibendum parturient cubilia quam, porttitor morbi torquent tempus taciti nec faucibus elementum phasellus, quis inceptos vestibulum gravida augue potenti eget nunc maecenas. Tempor facilisis ligula volutpat habitant consequat inceptos orci per potenti blandit platea, mus sapien eget vel libero vestibulum augue cubilia ut ultrices fringilla lectus, imperdiet pellentesque cum ridiculus convallis sollicitudin nisl interdum semper felis.
+## Introducción
 
-Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti augue nulla vivamus senectus odio, quisque curabitur enim consequat class sociis feugiat ullamcorper, felis dis imperdiet cubilia commodo sed massa phasellus. Viverra purus mus nisi condimentum dui vehicula facilisis turpis, habitant nascetur lectus tempor quisque habitasse urna scelerisque, nibh nullam vestibulum luctus aenean mollis metus. Suscipit gravida duis nec aliquet natoque molestie a ridiculus scelerisque cum, justo cursus sapien sodales purus dignissim vel facilisi magnis, inceptos rutrum ut integer auctor commodo sollicitudin fames et. Faucibus ligula nibh sagittis mauris auctor posuere habitant, scelerisque phasellus accumsan egestas gravida viverra nam, sed etiam eleifend proin massa dictumst. Porttitor risus luctus per aenean tellus primis fringilla vitae fames lacinia mauris metus, nec pulvinar quisque commodo sodales ac nibh natoque phasellus semper placerat. Lectus aenean potenti leo sollicitudin tristique eros quam ligula, vestibulum diam consequat enim torquent nec tempus, blandit viverra dapibus eleifend dis nunc nascetur.
+En los últimos años, los modelos de lenguaje de gran escala (LLMs) han demostrado capacidades relevantes en tareas como redacción, análisis de texto y recuperación de información. Sin embargo, su aplicación en contextos legales requiere una comprensión precisa de sus límites técnicos y de las arquitecturas necesarias para operar de forma confiable.
 
-## Sodales hendrerit malesuada et vestibulum
+Este artículo describe los principales avances técnicos en inteligencia artificial que impactan el trabajo jurídico estructurado, así como las brechas actuales que deben resolverse para lograr sistemas más robustos.
 
-- Luctus euismod pretium nisi et, est dui enim.
+## 1. Modelos de lenguaje como capa de procesamiento semántico
 
-- Curae eget inceptos malesuada, fermentum class.
+Los LLMs actuales operan como sistemas de predicción de tokens basados en grandes volúmenes de texto. Su fortaleza principal es la capacidad de:
 
-- Porttitor vestibulum aliquam porta feugiat velit, potenti eu placerat.
+- Interpretar lenguaje natural no estructurado
+- Generar documentos coherentes
+- Identificar patrones en normativa y jurisprudencia
 
-- Ligula lacus tempus ac porta, vel litora.
+Desde un punto de vista técnico, estos modelos no "razonan" en sentido causal o simbólico. Funcionan como aproximadores estadísticos de distribuciones lingüísticas.
 
-Torquent non nisi lacinia faucibus nibh tortor taciti commodo porttitor, mus hendrerit id leo scelerisque mollis habitasse orci tristique aptent, lacus at molestie cubilia facilisis porta accumsan condimentum. Metus lacus suscipit porttitor integer facilisi torquent, nostra nulla platea at natoque varius venenatis, id quam pharetra aliquam leo. Dictum orci himenaeos quam mi fusce lacinia maecenas ac magna eleifend laoreet, vivamus enim curabitur ullamcorper est ultrices convallis suscipit nascetur. Ornare fames pretium ante ac eget nisi tellus vivamus, convallis mauris sapien imperdiet sollicitudin aliquet taciti quam, lacinia tempor primis magna iaculis at eu. Est facilisi proin risus eleifend orci torquent ultricies platea, quisque nullam vel porttitor euismod sociis non, maecenas sociosqu interdum arcu sed pharetra potenti. Aliquet risus tempus hendrerit sapien tellus eget cursus enim etiam dui, lobortis nostra pellentesque odio posuere morbi ad neque senectus arcu eu, turpis proin ac felis purus fames magnis dis dignissim.
+En el contexto legal, esto implica que su uso es especialmente efectivo en:
 
-Orci volutpat augue viverra scelerisque dictumst ut condimentum vivamus, accumsan cum sem sollicitudin aliquet vehicula porta pretium placerat, malesuada euismod primis cubilia rutrum tempus parturient. Urna mauris in nibh morbi hendrerit vulputate condimentum, iaculis consequat porttitor dui dis euismod eros, arcu elementum venenatis varius lectus nisi. Nibh arcu ultrices semper morbi quam aptent quisque porta posuere iaculis, vestibulum cum vitae primis varius natoque conubia eu. Placerat sociis sagittis sociosqu morbi purus lobortis convallis, bibendum tortor ridiculus orci habitasse viverra dictum, quis rutrum fusce potenti volutpat vehicula. Curae porta inceptos lectus mus urna litora semper aliquam libero rutrum sem dui maecenas ligula quis, eget risus non imperdiet cum morbi magnis suspendisse etiam augue porttitor placerat facilisi hendrerit. Et eleifend eget augue duis fringilla sagittis erat est habitasse commodo tristique quisque pretium, suspendisse imperdiet inceptos mollis blandit magna mus elementum molestie sed vestibulum. Euismod morbi hendrerit suscipit felis ornare libero ligula, mus tortor urna interdum blandit nisi netus posuere, purus fermentum magnis nam primis nulla.
+- Redacción de escritos
+- Estructuración de argumentos estándar
+- Resumen de normativa aplicable
 
-## Elementum nisi urna cursus nisl quam ante tristique blandit ultricies eget
+## 2. Sistemas RAG (Retrieval-Augmented Generation)
 
-Netus at rutrum taciti vestibulum molestie conubia semper class potenti lobortis, hendrerit donec vitae ad libero natoque parturient litora congue. Torquent rhoncus odio cursus iaculis molestie arcu leo condimentum accumsan, laoreet congue duis libero justo tortor commodo fusce, massa eros hac euismod netus sodales mi magnis. Aenean nullam sollicitudin ad velit nulla venenatis suspendisse iaculis, aliquet senectus mollis aptent fringilla volutpat nascetur, nec urna vehicula lacinia neque augue orci. Suspendisse et eleifend convallis sollicitudin posuere diam turpis gravida congue ultrices, laoreet ultricies dapibus proin facilisis magna class praesent fusce. Mus morbi magnis ultricies sed turpis ultrices tempus tortor bibendum, netus nulla viverra torquent malesuada ridiculus tempor. Parturient sociosqu erat ullamcorper gravida natoque varius, etiam habitant augue praesent per curabitur iaculis, donec pellentesque cursus suscipit aliquet. Congue curae cursus scelerisque pellentesque quis fusce arcu eros dictumst luctus ridiculus nisl viverra, turpis class faucibus phasellus feugiat eleifend fringilla orci tristique habitasse conubia quam. Habitasse montes congue sodales rutrum cras torquent cursus auctor condimentum imperdiet egestas nascetur, platea tincidunt ut sollicitudin purus libero lobortis ad nisi diam quam.
+Una de las extensiones más relevantes es la incorporación de sistemas de recuperación de información (RAG), que permiten al modelo operar sobre fuentes externas.
 
-Suspendisse et eleifend convallis sollicitudin posuere diam turpis gravida congue ultrices, laoreet ultricies dapibus proin facilisis magna class praesent fusce. Mus morbi magnis ultricies sed turpis ultrices tempus tortor bibendum, netus nulla viverra torquent malesuada ridiculus tempor. Parturient sociosqu erat ullamcorper gravida natoque varius, etiam habitant augue praesent per curabitur iaculis, donec pellentesque cursus suscipit aliquet. Congue curae cursus scelerisque pellentesque quis fusce arcu eros dictumst luctus ridiculus nisl viverra, turpis class faucibus phasellus feugiat eleifend fringilla orci tristique habitasse conubia quam. Habitasse montes congue sodales rutrum cras torquent cursus auctor condimentum imperdiet egestas nascetur.
+**Arquitectura básica:**
+
+1. Indexación de documentos (leyes, contratos, jurisprudencia)
+2. Recuperación basada en embeddings
+3. Generación condicionada sobre los documentos recuperados
+
+Esto permite:
+
+- Reducir alucinaciones
+- Anclar respuestas en fuentes verificables
+- Trabajar con normativa actualizada
+
+En flujos legales, RAG es fundamental para mantener consistencia normativa.
+
+## 3. Orquestación mediante agentes y flujos estructurados
+
+El uso de agentes introduce una capa de control sobre el comportamiento del modelo.
+
+En lugar de una única interacción, se define un flujo compuesto por:
+
+- Descomposición de tareas
+- Validaciones intermedias
+- Uso de herramientas externas (bases de datos, cálculos, validadores)
+
+Este enfoque permite transformar al modelo en un componente dentro de un sistema mayor.
+
+**Ejemplo en un flujo legal:**
+
+1. Clasificación del tipo de trámite
+2. Identificación de requisitos
+3. Generación de documentos
+4. Validación de consistencia
+
+## 4. Limitaciones actuales de los modelos
+
+A pesar de su utilidad, existen limitaciones estructurales relevantes:
+
+### 4.1 Ausencia de modelos causales
+
+Los LLMs no poseen representaciones internas de causalidad. No pueden:
+
+- Simular efectos de decisiones
+- Evaluar contrafactuales de manera consistente
+
+Esto limita su uso en análisis complejos de responsabilidad o daño.
+
+### 4.2 Falta de estado persistente
+
+Los modelos no mantienen memoria continua del caso. Cada interacción depende de:
+
+- Contexto suministrado manualmente
+- Sistemas externos de almacenamiento
+
+Por esta razón, cualquier sistema legal basado en IA requiere una capa adicional que gestione el estado del proceso, cronología y documentación acumulada.
+
+### 4.3 Planificación limitada
+
+La generación de "planes" por parte del modelo es principalmente secuencial y no implica exploración de múltiples escenarios. No existe:
+
+- Evaluación probabilística de estrategias
+- Simulación de decisiones alternativas
+
+### 4.4 Calibración de incertidumbre
+
+Los modelos no tienen un mecanismo interno confiable para estimar su nivel de certeza. Esto implica que la confianza expresada en el texto no es necesariamente indicativa de precisión y se requieren validaciones externas.
+
+### 4.5 Conocimiento institucional no estructurado
+
+Gran parte del funcionamiento práctico del sistema legal depende de factores no formalizados: tiempos reales de respuesta, prácticas administrativas y comportamientos recurrentes de actores. Este tipo de información no suele estar disponible en bases de datos estructuradas.
+
+## 5. Hacia arquitecturas híbridas
+
+Dado lo anterior, la tendencia técnica no es reemplazar sistemas existentes, sino construir arquitecturas híbridas.
+
+Una arquitectura típica incluye:
+
+- **LLM** → procesamiento lingüístico
+- **Base de conocimiento** → normativa y documentos
+- **Sistema de estado** → seguimiento del caso
+- **Motor de reglas** → validaciones determinísticas
+- **Interfaz humana** → supervisión y decisiones críticas
+
+Este enfoque permite aumentar consistencia, reducir errores operativos y estandarizar procesos.
+
+## 6. Líneas de investigación en desarrollo
+
+Existen varias áreas en desarrollo que pueden impactar estos sistemas:
+
+- Modelos causales integrados
+- Representaciones persistentes del estado del mundo
+- Sistemas de planificación bajo incertidumbre
+- Métodos de calibración de confianza
+- Simulación multi-agente
+
+Actualmente, estas líneas se encuentran en etapas tempranas o intermedias de desarrollo.
+
+## Conclusión
+
+Los modelos de lenguaje actuales constituyen una herramienta eficiente para el procesamiento y generación de información jurídica, especialmente en tareas estructuradas y repetitivas.
+
+Sin embargo, su uso efectivo requiere integrarlos dentro de sistemas más amplios que compensen sus limitaciones mediante estructuras de datos, validaciones y control de procesos.
+
+El valor no se encuentra únicamente en el modelo, sino en la arquitectura que lo rodea.

@@ -1,0 +1,199 @@
+---
+import { Icon } from "astro-icon/components";
+import "@fontsource-variable/inter/index.css";
+import "@fontsource-variable/bricolage-grotesque";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon2.png" />
+    <title>Presencia en Google Maps | Agiliza</title>
+    <meta
+      name="description"
+      content="Haz que tu negocio aparezca en Google Maps y atrae más clientes locales. Configuración profesional por solo $49.99 USD."
+    />
+  </head>
+  <body class="bg-white text-[#333E48] antialiased">
+
+    <!-- NAV minimal -->
+    <header class="border-b border-gray-100 py-4 px-6">
+      <div class="max-w-5xl mx-auto flex items-center justify-between">
+        <a href="/">
+          <img src="/agilizalogoparaastro.png" alt="Agiliza" class="h-8 w-auto" />
+        </a>
+        <span class="text-sm text-slate-500">¿Tienes preguntas? <a href="/contact" class="text-[#F15D2D] font-medium hover:underline">Contáctanos</a></span>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-white pt-20 pb-16 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 text-[#F15D2D] text-sm font-semibold px-4 py-1.5 rounded-full mb-8">
+          <Icon name="bx:bxs-map" class="w-4 h-4" />
+          Servicio Digital
+        </div>
+
+        <h1 class="text-5xl lg:text-6xl font-bold lg:tracking-tight leading-tight mb-6">
+          Tu negocio en<br />
+          <span class="text-[#F15D2D]">Google Maps</span>
+        </h1>
+
+        <p class="text-xl text-slate-600 max-w-xl mx-auto mb-4 leading-relaxed">
+          Configuramos y optimizamos tu perfil de Google Business para que
+          tus clientes te encuentren cuando buscan lo que tú ofreces.
+        </p>
+
+        <!-- Price -->
+        <div class="flex items-baseline justify-center gap-2 mb-10">
+          <span class="text-5xl font-bold text-[#333E48]">$49.99</span>
+          <span class="text-slate-500 text-lg">USD &nbsp;·&nbsp; pago único</span>
+        </div>
+
+        <!-- CTA -->
+        <a
+          href="/contact?servicio=google-maps"
+          class="inline-flex items-center gap-2 bg-[#F15D2D] hover:bg-[#d94f23] text-white font-semibold text-lg px-10 py-4 rounded-xl transition-colors shadow-lg shadow-orange-100">
+          <Icon name="bx:bxs-map-pin" class="w-5 h-5" />
+          Quiero aparecer en Google Maps
+        </a>
+
+        <p class="mt-4 text-sm text-slate-400">Sin contratos. Sin cuotas mensuales.</p>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF BAR -->
+    <section class="bg-slate-50 border-y border-slate-100 py-8 px-6">
+      <div class="max-w-3xl mx-auto flex flex-wrap justify-center gap-8 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#333E48]">+200</p>
+          <p class="text-sm text-slate-500">negocios registrados</p>
+        </div>
+        <div class="hidden sm:block w-px bg-slate-200"></div>
+        <div>
+          <p class="text-2xl font-bold text-[#333E48]">48 h</p>
+          <p class="text-sm text-slate-500">tiempo de entrega</p>
+        </div>
+        <div class="hidden sm:block w-px bg-slate-200"></div>
+        <div>
+          <p class="text-2xl font-bold text-[#333E48]">100%</p>
+          <p class="text-sm text-slate-500">configuración profesional</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="bg-white py-20 px-6">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-bold text-center mb-4">
+          ¿Qué incluye?
+        </h2>
+        <p class="text-slate-600 text-center mb-14 text-lg">
+          Todo lo que necesitas para que Google te encuentre primero.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-8">
+          {[
+            {
+              icon: "bx:bxs-store",
+              title: "Perfil de Google Business",
+              desc: "Creamos o reclamamos tu ficha de negocio con información completa y verificada.",
+            },
+            {
+              icon: "bx:bxs-map-pin",
+              title: "Ubicación exacta",
+              desc: "Configuramos tu dirección, zona de servicio y horario para que los clientes cercanos te encuentren.",
+            },
+            {
+              icon: "bx:bxs-camera",
+              title: "Fotos y descripción",
+              desc: "Optimizamos tu descripción con palabras clave y subimos imágenes que generan confianza.",
+            },
+            {
+              icon: "bx:bxs-star",
+              title: "Categorías estratégicas",
+              desc: "Elegimos las categorías correctas para que aparezcas en las búsquedas relevantes de tu industria.",
+            },
+            {
+              icon: "bx:bxs-phone",
+              title: "Datos de contacto",
+              desc: "Teléfono, sitio web y botón de llamada directa para que el cliente llegue a ti sin fricciones.",
+            },
+            {
+              icon: "bx:bxs-check-shield",
+              title: "Entrega lista para usar",
+              desc: "Te enviamos las credenciales y te explicamos cómo gestionar reseñas y actualizaciones.",
+            },
+          ].map((item) => (
+            <div class="flex gap-4 items-start">
+              <div class="mt-1 bg-[#F15D2D] rounded-full p-2 w-9 h-9 shrink-0 flex items-center justify-center">
+                <Icon name={item.icon} class="text-white w-5 h-5" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-1">{item.title}</h3>
+                <p class="text-slate-500 leading-relaxed text-sm">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="bg-slate-50 py-20 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">Así de simple</h2>
+        <p class="text-slate-600 text-lg mb-14">Tres pasos y tu negocio ya está en el mapa.</p>
+
+        <div class="grid sm:grid-cols-3 gap-10 text-left">
+          {[
+            { step: "1", title: "Contáctanos", desc: "Completa el formulario con los datos de tu negocio." },
+            { step: "2", title: "Lo hacemos por ti", desc: "Nuestro equipo configura y optimiza tu perfil en 48 horas." },
+            { step: "3", title: "Listo para crecer", desc: "Recibes acceso a tu perfil y empiezas a recibir clientes." },
+          ].map((item) => (
+            <div class="flex flex-col items-center text-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-[#F15D2D] text-white font-bold text-xl flex items-center justify-center">
+                {item.step}
+              </div>
+              <h3 class="font-semibold text-lg">{item.title}</h3>
+              <p class="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="bg-white py-20 px-6">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+          ¿Listo para aparecer en Google Maps?
+        </h2>
+        <p class="text-slate-600 text-lg mb-4">
+          Por un único pago de <strong class="text-[#333E48]">$49.99 USD</strong> dejamos tu negocio visible para todos tus clientes locales.
+        </p>
+
+        <a
+          href="/contact?servicio=google-maps"
+          class="inline-flex items-center gap-2 bg-[#F15D2D] hover:bg-[#d94f23] text-white font-semibold text-lg px-10 py-4 rounded-xl transition-colors shadow-lg shadow-orange-100 mb-4">
+          <Icon name="bx:bxs-map-pin" class="w-5 h-5" />
+          Empezar ahora — $49.99 USD
+        </a>
+
+        <p class="text-sm text-slate-400">Resultado garantizado o te devolvemos tu dinero.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER minimal -->
+    <footer class="border-t border-gray-100 py-6 px-6 text-center text-sm text-slate-400">
+      <p>© {new Date().getFullYear()} Agiliza. Todos los derechos reservados. &nbsp;·&nbsp;
+        <a href="/privacy" class="hover:text-[#F15D2D] transition-colors">Privacidad</a>
+      </p>
+    </footer>
+
+  </body>
+</html>
