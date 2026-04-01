@@ -3,6 +3,9 @@ import { Icon } from "astro-icon/components";
 import "@fontsource-variable/inter/index.css";
 import "@fontsource-variable/bricolage-grotesque";
 import "../styles/global.css";
+
+const waMessage = encodeURIComponent("Hola, me interesa el servicio de Google Maps para mi negocio. ¿Me pueden dar más información?");
+const waLink = `https://wa.me/593984897480?text=${waMessage}`;
 ---
 
 <!doctype html>
@@ -25,7 +28,7 @@ import "../styles/global.css";
         <a href="/">
           <img src="/agilizalogoparaastro.png" alt="Agiliza" class="h-8 w-auto" />
         </a>
-        <span class="text-sm text-slate-500">¿Tienes preguntas? <a href="/contact" class="text-[#F15D2D] font-medium hover:underline">Contáctanos</a></span>
+        <span class="text-sm text-slate-500">¿Tienes preguntas? <a href={waLink} class="text-[#F15D2D] font-medium hover:underline">Contáctanos</a></span>
       </div>
     </header>
 
@@ -38,31 +41,30 @@ import "../styles/global.css";
           Servicio Digital
         </div>
 
-        <h1 class="text-5xl lg:text-6xl font-bold lg:tracking-tight leading-tight mb-6">
-          Tu negocio en<br />
-          <span class="text-[#F15D2D]">Google Maps</span>
+        <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight leading-tight mb-3">
+          Que te encuentren los clientes<br />que ya te están buscando
         </h1>
+        <p class="text-2xl font-semibold text-[#F15D2D] mb-6">en Google Maps</p>
 
-        <p class="text-xl text-slate-600 max-w-xl mx-auto mb-4 leading-relaxed">
+        <p class="text-xl text-slate-600 max-w-xl mx-auto mb-6 leading-relaxed">
           Configuramos y optimizamos tu perfil de Google Business para que
           tus clientes te encuentren cuando buscan lo que tú ofreces.
         </p>
 
-        <!-- Price -->
-        <div class="flex items-baseline justify-center gap-2 mb-10">
-          <span class="text-5xl font-bold text-[#333E48]">$49.99</span>
-          <span class="text-slate-500 text-lg">USD &nbsp;·&nbsp; pago único</span>
-        </div>
+        <!-- Value props line -->
+        <p class="text-sm text-slate-500 font-medium mb-8 tracking-wide">
+          Configuración profesional &nbsp;·&nbsp; Pago único &nbsp;·&nbsp; Sin contratos
+        </p>
 
         <!-- CTA -->
         <a
-          href="/contact?servicio=google-maps"
+          href={waLink}
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center gap-2 bg-[#F15D2D] hover:bg-[#d94f23] text-white font-semibold text-lg px-10 py-4 rounded-xl transition-colors shadow-lg shadow-orange-100">
           <Icon name="bx:bxs-map-pin" class="w-5 h-5" />
           Quiero aparecer en Google Maps
         </a>
-
-        <p class="mt-4 text-sm text-slate-400">Sin contratos. Sin cuotas mensuales.</p>
       </div>
     </section>
 
@@ -83,6 +85,16 @@ import "../styles/global.css";
           <p class="text-2xl font-bold text-[#333E48]">100%</p>
           <p class="text-sm text-slate-500">configuración profesional</p>
         </div>
+      </div>
+    </section>
+
+    <!-- FOR WHOM -->
+    <section class="bg-white py-10 px-6 border-b border-slate-100">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-slate-600 text-base">
+          <span class="font-semibold text-[#333E48]">¿Para quién es?</span>
+          &nbsp;Restaurantes, consultorios, talleres mecánicos, tiendas, salones de belleza, farmacias, abogados, veterinarias y cualquier negocio local que quiera ser encontrado.
+        </p>
       </div>
     </section>
 
@@ -140,6 +152,15 @@ import "../styles/global.css";
             </div>
           ))}
         </div>
+
+        <!-- Price block (moved from hero) -->
+        <div class="mt-14 text-center">
+          <div class="flex items-baseline justify-center gap-2">
+            <span class="text-4xl lg:text-5xl font-bold text-[#333E48]">$49.99</span>
+            <span class="text-slate-500 text-lg">USD &nbsp;·&nbsp; pago único</span>
+          </div>
+          <p class="text-slate-500 text-sm mt-2">Sin contratos. Sin cuotas mensuales.</p>
+        </div>
       </div>
     </section>
 
@@ -167,29 +188,65 @@ import "../styles/global.css";
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="bg-white py-20 px-6">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12">Preguntas frecuentes</h2>
+
+        <div class="space-y-8">
+          {[
+            {
+              q: "¿No puedo hacerlo yo mismo?",
+              a: "Puedes intentarlo, pero hacerlo bien toma tiempo y conocimiento técnico. Nosotros evitamos errores que pueden hacer que Google rechace o suspenda tu perfil.",
+            },
+            {
+              q: "¿Es seguro darles mis datos?",
+              a: "Totalmente. Solo necesitamos la información básica de tu negocio (nombre, dirección, teléfono). Nunca pedimos contraseñas de cuentas personales.",
+            },
+            {
+              q: "¿Qué pasa si no funciona?",
+              a: "Si tu perfil no queda activo y visible en Google Maps, te devolvemos el 100% de tu pago. Sin preguntas.",
+            },
+          ].map((item) => (
+            <div class="border-b border-slate-100 pb-8">
+              <h3 class="font-semibold text-lg mb-2 text-[#333E48]">{item.q}</h3>
+              <p class="text-slate-500 leading-relaxed">{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <!-- FINAL CTA -->
     <section class="bg-white py-20 px-6">
       <div class="max-w-xl mx-auto text-center">
         <h2 class="text-3xl lg:text-4xl font-bold mb-4">
           ¿Listo para aparecer en Google Maps?
         </h2>
-        <p class="text-slate-600 text-lg mb-4">
+        <p class="text-slate-600 text-lg mb-8">
           Por un único pago de <strong class="text-[#333E48]">$49.99 USD</strong> dejamos tu negocio visible para todos tus clientes locales.
         </p>
 
         <a
-          href="/contact?servicio=google-maps"
-          class="inline-flex items-center gap-2 bg-[#F15D2D] hover:bg-[#d94f23] text-white font-semibold text-lg px-10 py-4 rounded-xl transition-colors shadow-lg shadow-orange-100 mb-4">
+          href={waLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-[#F15D2D] hover:bg-[#d94f23] text-white font-semibold text-lg px-10 py-4 rounded-xl transition-colors shadow-lg shadow-orange-100 mb-8">
           <Icon name="bx:bxs-map-pin" class="w-5 h-5" />
           Empezar ahora — $49.99 USD
         </a>
 
-        <p class="text-sm text-slate-400">Resultado garantizado o te devolvemos tu dinero.</p>
+        <!-- Guarantee badge -->
+        <div class="inline-flex items-center gap-3 bg-green-50 border border-green-200 text-green-800 text-sm font-medium px-5 py-3 rounded-xl">
+          <Icon name="bx:bxs-shield" class="w-5 h-5 text-green-600 shrink-0" />
+          Resultado garantizado o te devolvemos tu dinero
+        </div>
       </div>
     </section>
 
     <!-- FOOTER minimal -->
     <footer class="border-t border-gray-100 py-6 px-6 text-center text-sm text-slate-400">
+      <p class="mb-2">Somos un equipo de Ibarra especializado en tecnología para negocios locales.</p>
       <p>© {new Date().getFullYear()} Agiliza. Todos los derechos reservados. &nbsp;·&nbsp;
         <a href="/privacy" class="hover:text-[#F15D2D] transition-colors">Privacidad</a>
       </p>
