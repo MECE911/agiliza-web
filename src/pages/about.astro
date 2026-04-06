@@ -7,35 +7,81 @@ import Sectionhead from "@/components/sectionhead.astro";
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Quiénes Somos?</Fragment>
-      <Fragment slot="desc">Somos un equipo pequeño pero apasionado por la IA y la tecnología legal.</Fragment>
+      <Fragment slot="title">Quienes Somos?</Fragment>
+      <Fragment slot="desc">
+        Somos un equipo pequeno pero apasionado por la IA y la tecnologia legal.
+      </Fragment>
     </Sectionhead>
 
-   <div class="flex flex-col gap-4 mx-auto max-w-4xl mt-16">
-  <h2 class="font-boAstrold text-3xl text-gray-800">
-    Buscamos ayudar a digitalizar y automatizar el mundo.
-  </h2>
+    <div class="mx-auto mt-16 flex max-w-4xl flex-col gap-4">
+      <h2 class="text-3xl text-gray-800 font-boAstrold">
+        Buscamos ayudar a digitalizar y automatizar el mundo.
+      </h2>
 
-  <p class="text-lg leading-relaxed text-slate-500">
-    Somos un equipo de profesionales que buscamos dar orden y soluciones a personas
-    y organizaciones, promoviendo la automatización e inclusión de IA.
-  </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Somos un equipo de profesionales que buscamos dar orden y soluciones a personas
+        y organizaciones, promoviendo la automatizacion e inclusion de IA.
+      </p>
 
-  <p class="text-lg font-medium text-gray-700">
-    Filosofía:
-  </p>
+      <p class="text-lg font-medium text-gray-700">Filosofia:</p>
 
-  <ul class="list-disc pl-6 text-lg leading-relaxed text-slate-500 space-y-2">
-    <li>
-      <strong>Hazlo tú mismo:</strong> es posible que con la ayuda de la IA puedas
-      resolver muchas necesidades sin ayuda de un profesional y <strong>gratis</strong>.
-    </li>
-    <li>
-      <strong>Precios claros:</strong> si realmente necesitas ayuda de un profesional,
-      siempre encontrarás el precio marcado, sin sorpresas.
-    </li>
-  </ul>
-</div>
+      <ul class="list-disc space-y-2 pl-6 text-lg leading-relaxed text-slate-500">
+        <li>
+          <strong>Hazlo tu mismo:</strong> es posible que con la ayuda de la IA puedas
+          resolver muchas necesidades sin ayuda de un profesional y <strong>gratis</strong>.
+        </li>
+        <li>
+          <strong>Precios claros:</strong> si realmente necesitas ayuda de un profesional,
+          siempre encontraras el precio marcado, sin sorpresas.
+        </li>
+      </ul>
+    </div>
 
+    <section class="mx-auto mt-20 max-w-5xl">
+      <div class="text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
+          Equipo
+        </p>
+        <h2 class="mt-3 text-3xl font-semibold text-slate-900">
+          Personas que impulsan Agiliza
+        </h2>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <article class="overflow-hidden rounded-3xl bg-white">
+          <div class="mx-auto mt-6 h-[280px] w-full max-w-[240px] overflow-hidden rounded-2xl bg-slate-100">
+            <img
+              src="/miguel-coronel.jpg"
+              alt="Miguel Coronel"
+              class="h-full w-full object-cover object-top"
+            />
+          </div>
+
+          <div class="space-y-3 p-6 text-center">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+              Director
+            </p>
+            <h3 class="text-2xl font-semibold text-slate-900">Miguel Coronel</h3>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-3xl bg-white">
+          <div class="mx-auto mt-6 h-[280px] w-full max-w-[240px] overflow-hidden rounded-2xl bg-slate-100">
+            <img
+              src="/Alba_figuero.jpg"
+              alt="Alba Figuero"
+              class="h-full w-full object-cover object-top"
+            />
+          </div>
+
+          <div class="space-y-3 p-6 text-center">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+              Estrategia de Marketing
+            </p>
+            <h3 class="text-2xl font-semibold text-slate-900">Alba Figuero</h3>
+          </div>
+        </article>
+      </div>
+    </section>
   </Container>
 </Layout>
