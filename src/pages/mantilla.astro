@@ -1,0 +1,157 @@
+---
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Manuel Mantilla</title>
+
+    <style>
+      :root {
+        --campaign-yellow: #eead1f;
+        --campaign-blue: #1e40af;
+        --campaign-red: #dc2626;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: var(--campaign-yellow);
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        padding: 0;
+        background: var(--campaign-yellow);
+      }
+
+      .shell {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .poster {
+        width: min(100vw, 820px);
+        min-height: calc(100vh - 75px);
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .poster img {
+        width: 100%;
+        height: calc(100vh - 75px);
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      @media (max-width: 768px) {
+        .poster {
+          width: 100%;
+          min-height: calc(100vh - 68px);
+        }
+
+        .poster img {
+          height: auto;
+          min-height: calc(100vh - 68px);
+          object-fit: contain;
+          object-position: center top;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="hero" aria-labelledby="mantilla-title">
+      <h1 id="mantilla-title" class="sr-only">
+        Juan Manuel Mantilla, candidato a la alcaldia de Ibarra
+      </h1>
+
+      <div class="shell">
+        <header
+          style="width:100%;background:#eead1f;border-bottom:3px solid rgba(30,64,175,.15);"
+        >
+          <div
+            style="width:min(100%,1180px);margin:0 auto;padding:1rem 1.25rem .9rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;"
+          >
+            <div
+              aria-label="Lema de campana"
+              style="display:flex;flex-direction:column;text-transform:uppercase;font-family:Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif;line-height:.88;letter-spacing:.01em;"
+            >
+              <span style="color:#1e40af;font-size:1.15rem;">Cambio. Serio. Seguro.</span>
+              <span style="color:#dc2626;font-size:1.15rem;">Ibarra Adelante</span>
+            </div>
+
+            <nav aria-label="Principal" style="display:flex;align-items:center;justify-content:flex-end;">
+              <a
+                href="#sumate"
+                style="display:inline-flex;align-items:center;justify-content:center;min-height:2.5rem;padding:.6rem 1rem .5rem;border-radius:999px;border:3px solid #1e40af;background:#dc2626;color:#ffd24a;text-decoration:none;text-transform:uppercase;font-family:Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif;font-size:.95rem;line-height:1;letter-spacing:.04em;box-shadow:4px 4px 0 #1e40af;"
+              >&iexcl;S&uacute;mate!</a>
+            </nav>
+          </div>
+        </header>
+
+        <div class="poster">
+          <img
+            src="/mantilla2.png"
+            alt="Afiche de campana de Juan Manuel Mantilla con el mensaje Cambio. Serio. Seguro."
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      aria-labelledby="seguridad-title"
+      style="background:#ffffff;padding:88px 0 96px;"
+    >
+      <div
+        style="width:min(92vw,1650px);margin:0 auto;padding:0 32px;"
+      >
+        <h2 id="seguridad-title" class="sr-only">Propuesta de seguridad</h2>
+        <p
+          style="margin:0 auto;max-width:1560px;color:#1e40af;font-family:'Segoe UI Variable','Aptos','Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:clamp(24px,1.45vw,31px);line-height:1.48;font-weight:400;letter-spacing:-.02em;text-align:left;"
+        >
+          La seguridad se ha convertido en una de las mayores preocupaciones de las familias
+          ibarrenas, segun encuestas locales que reflejan
+          <strong style="font-weight:800;">un aumento significativo en la percepcion de inseguridad en los ultimos anos</strong>.
+          Esto muestra el temor creciente y la desconfianza en la capacidad de las autoridades
+          para garantizar tranquilidad en los barrios. Por esta razon, es fundamental
+          reconstruir una gestion municipal solida en materia de convivencia y orden.
+          <strong style="font-weight:800;">Recuperaremos los espacios publicos, reforzaremos la coordinacion con la Policia Nacional y fortaleceremos los sistemas de vigilancia en zonas urbanas y rurales.</strong>
+          La paz y la tranquilidad solo seran posibles si contamos con un municipio presente,
+          cercano y eficiente, y todo proceso de dialogo comunitario debera orientarse a
+          <strong style="font-weight:800;">reducir los factores que alimentan la violencia y las economias ilegales.</strong>
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
