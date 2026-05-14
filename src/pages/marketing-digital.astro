@@ -1,0 +1,116 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const services = [
+  {
+    title: "Gestión de Redes Sociales",
+    description:
+      "Publicaciones constantes y diseñadas en Instagram, Facebook y TikTok. Contenido generado con IA y revisado para mantener la voz de tu marca.",
+    icon: "bx:bxl-instagram",
+  },
+  {
+    title: "Publicidad Pagada (Meta Ads)",
+    description:
+      "Campañas en Facebook e Instagram orientadas a resultados: tráfico, leads o ventas. Configuración, segmentación y optimización continua.",
+    icon: "bx:bxs-bar-chart-alt-2",
+  },
+  {
+    title: "Generación de Leads",
+    description:
+      "Formularios, landing pages y flujos de captura conectados directamente a WhatsApp o tu CRM para que nunca pierdas un prospecto.",
+    icon: "bx:bxs-user-plus",
+  },
+  {
+    title: "Integración con WhatsApp",
+    description:
+      "Automatiza respuestas, conecta tus formularios y mantén contacto con clientes a través de WhatsApp Business de forma ordenada y escalable.",
+    icon: "bx:bxl-whatsapp",
+  },
+  {
+    title: "Contenido Asistido por IA",
+    description:
+      "Copywriting, diseño de posts y estrategia de contenido producida con sistemas de IA. Más frecuencia, menos costo, sin perder calidad.",
+    icon: "bx:bxs-pencil",
+  },
+  {
+    title: "Presencia Online",
+    description:
+      "Optimización de perfil de Google, directorios locales, reseñas y consistencia de información para que te encuentren fácilmente.",
+    icon: "bx:bxs-map",
+  },
+  {
+    title: "Reportes y Métricas",
+    description:
+      "Reporte mensual con las métricas que importan: alcance, interacciones, leads generados y costo por resultado.",
+    icon: "bx:bxs-report",
+  },
+];
+---
+
+<Layout title="Marketing Digital — Agiliza">
+  <Container>
+    <section class="py-16">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold text-[#F15D2D]">Agiliza Soluciones</p>
+        <h1 class="text-3xl font-semibold tracking-tight mt-2">
+          Marketing Digital
+        </h1>
+        <p class="mt-4 text-base text-slate-600 max-w-2xl">
+          Presencia online activa, publicidad que genera resultados y
+          automatización de contacto con clientes — todo a un costo que las
+          PYMEs ecuatorianas pueden pagar sin depender de agencias tradicionales.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            href="/contact"
+            class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium bg-[#F15D2D] text-white hover:bg-[#d94f23] transition-colors"
+          >
+            Solicitar cotización
+          </a>
+          <a
+            href="/pricing"
+            class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium border border-[#F15D2D] text-[#F15D2D] hover:bg-[#fff2ed] transition-colors"
+          >
+            Ver precios
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((s) => (
+          <div class="rounded-2xl border border-black/10 p-5 hover:border-[#F15D2D] transition">
+            <div class="flex items-start gap-3">
+              <div class="rounded-xl border border-black/10 p-2">
+                <Icon name={s.icon} class="h-6 w-6 text-[#F15D2D]" />
+              </div>
+              <div>
+                <h2 class="text-base font-semibold">{s.title}</h2>
+                <p class="mt-2 text-sm text-slate-500">{s.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-14 rounded-2xl border border-black/10 p-6 bg-slate-50">
+        <h3 class="text-lg font-semibold">¿Tu negocio necesita más visibilidad?</h3>
+        <p class="mt-2 text-sm text-slate-600 max-w-xl">
+          Sin contratos largos ni paquetes complicados. Cuéntame dónde estás y
+          qué resultado quieres lograr — armamos un plan que tenga sentido para
+          tu presupuesto.
+        </p>
+        <a
+          href="/contact"
+          class="mt-4 inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium border border-[#F15D2D] text-[#F15D2D] hover:bg-[#fff2ed] transition-colors"
+        >
+          Hablemos
+        </a>
+      </div>
+    </section>
+  </Container>
+</Layout>

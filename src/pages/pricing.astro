@@ -4,78 +4,165 @@ import Container from "@/components/container.astro";
 import Sectionhead from "@/components/sectionhead.astro";
 import PricingCard from "@/components/pricing.astro";
 
-const pricing = [
+const marketingPlans = [
   {
-    name: "Servicios Digitales",
-    price: "Free",
+    name: "Inicio",
+    price: {
+      monthly: "$89",
+      annual: "$75",
+      discount: "16%",
+      original: "$89",
+    },
     popular: false,
     features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
+      "1 red social activa",
+      "8 publicaciones al mes",
+      "Diseño con IA",
+      "Reporte mensual básico",
     ],
     button: {
-      text: "Contáctanos",
-      link: "/",
+      text: "Empezar",
+      link: "/contact",
     },
   },
   {
-    name: "Trámites Legales",
+    name: "Crecimiento",
     price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
+      monthly: "$189",
+      annual: "$159",
+      discount: "16%",
+      original: "$189",
     },
     popular: true,
     features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
+      "3 redes sociales",
+      "20 publicaciones al mes",
+      "Meta Ads básico incluido",
+      "Integración WhatsApp",
+      "Reporte mensual detallado",
     ],
     button: {
-      text: "Contáctanos",
-      link: "#",
+      text: "Empezar",
+      link: "/contact",
     },
   },
   {
-    name: "Casos Jurídicos",
-    price: "Custom",
+    name: "Escala",
+    price: {
+      monthly: "$349",
+      annual: "$295",
+      discount: "15%",
+      original: "$349",
+    },
     popular: false,
     features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
+      "Redes sociales ilimitadas",
+      "Posts ilimitados",
+      "Gestión completa de anuncios",
+      "Generación de leads activa",
+      "WhatsApp automatizado",
+      "Reporte semanal",
     ],
     button: {
-      text: "Contáctanos",
+      text: "Empezar",
+      link: "/contact",
+    },
+  },
+];
+
+const softwarePlans = [
+  {
+    name: "Sitio Web",
+    price: "desde $350",
+    popular: false,
+    features: [
+      "Landing page o sitio corporativo",
+      "Optimizado para SEO",
+      "Diseño responsive",
+      "Formulario de contacto",
+      "1 revisión incluida",
+    ],
+    button: {
+      text: "Solicitar cotización",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Automatización",
+    price: "desde $200",
+    popular: true,
+    features: [
+      "Formularios → WhatsApp / Email",
+      "Integración CRM básica",
+      "Flujos con Zapier / Make / n8n",
+      "Notificaciones automáticas",
+      "1 mes de soporte incluido",
+    ],
+    button: {
+      text: "Solicitar cotización",
+      link: "/contact",
+    },
+  },
+  {
+    name: "A la medida",
+    price: "Consultar",
+    popular: false,
+    features: [
+      "Aplicaciones web (React + Firebase)",
+      "Portal de clientes con login",
+      "Ecommerce (Shopify / WooCommerce)",
+      "Sistemas con IA y LLMs",
+      "Soporte y mantenimiento",
+    ],
+    button: {
+      text: "Hablemos",
       link: "/contact",
     },
   },
 ];
 ---
 
-<Layout title="Pricing">
+<Layout title="Precios — Agiliza">
   <Container>
     <Sectionhead>
       <Fragment slot="title">Precios</Fragment>
       <Fragment slot="desc">
-        Precios simples y predecibles. Sin sorpresas.
+        Planes claros y accesibles. Sin contratos largos ni sorpresas.
       </Fragment>
     </Sectionhead>
 
-    <div
-      class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
-      {pricing.map((item) => <PricingCard plan={item} />)}
+    <div class="mt-14">
+      <h2 class="text-2xl font-semibold text-center">Marketing Digital</h2>
+      <p class="text-center text-slate-500 mt-2 text-sm">
+        Planes mensuales — cancela cuando quieras.
+      </p>
+      <div class="grid md:grid-cols-3 gap-8 mx-auto max-w-screen-lg mt-8">
+        {marketingPlans.map((item) => <PricingCard plan={item} />)}
+      </div>
+    </div>
+
+    <div class="mt-20">
+      <h2 class="text-2xl font-semibold text-center">Desarrollo de Software</h2>
+      <p class="text-center text-slate-500 mt-2 text-sm">
+        Proyectos a precio fijo — cotización sin compromiso.
+      </p>
+      <div class="grid md:grid-cols-3 gap-8 mx-auto max-w-screen-lg mt-8">
+        {softwarePlans.map((item) => <PricingCard plan={item} />)}
+      </div>
+    </div>
+
+    <div class="mt-16 rounded-2xl bg-slate-50 border border-black/10 p-8 text-center max-w-2xl mx-auto">
+      <h3 class="text-lg font-semibold">¿Necesitas algo distinto?</h3>
+      <p class="text-slate-500 text-sm mt-2">
+        Muchos de nuestros clientes tienen necesidades mixtas. Cuéntanos tu
+        caso y armamos un plan combinado que se ajuste a tu presupuesto.
+      </p>
+      <a
+        href="/contact"
+        class="mt-5 inline-flex items-center rounded-lg px-5 py-2.5 text-sm font-medium bg-[#F15D2D] text-white hover:bg-[#d94f23] transition-colors"
+      >
+        Contáctanos
+      </a>
     </div>
   </Container>
 </Layout>

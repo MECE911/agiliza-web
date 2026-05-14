@@ -1,0 +1,115 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const services = [
+  {
+    title: "Sitios Web",
+    description:
+      "Landing pages, sitios corporativos y blogs optimizados para SEO. Construidos en Astro o WordPress — rápidos, livianos y fáciles de mantener.",
+    icon: "bx:bxs-layout",
+  },
+  {
+    title: "Aplicaciones Web",
+    description:
+      "Aplicaciones a medida con React + Firebase: autenticación, base de datos en tiempo real, paneles de control y lógica de negocio.",
+    icon: "bx:bxs-devices",
+  },
+  {
+    title: "Portal de Clientes",
+    description:
+      "Acceso con login para que tus clientes consulten documentos, revisen avances y reciban actualizaciones en un solo lugar.",
+    icon: "bx:bxs-dashboard",
+  },
+  {
+    title: "Ecommerce",
+    description:
+      "Tiendas online en Shopify o WooCommerce: catálogo de productos, pagos, envíos e integraciones con sistemas contables básicos.",
+    icon: "bx:bxs-store",
+  },
+  {
+    title: "Automatización de Procesos",
+    description:
+      "Flujos automáticos con Zapier, Make o n8n: formularios → WhatsApp, actualizaciones de CRM, recordatorios, facturas y más.",
+    icon: "bx:bxs-cog",
+  },
+  {
+    title: "Flujos de Trabajo con IA",
+    description:
+      "Sistemas que usan LLMs para generar contenido, clasificar información, responder consultas y reducir trabajo manual repetitivo.",
+    icon: "bx:bxs-brain",
+  },
+  {
+    title: "Mantenimiento y Soporte",
+    description:
+      "Actualizaciones, respaldos, correcciones, mejoras de rendimiento y soporte continuo para que tu plataforma siempre funcione.",
+    icon: "bx:bxs-wrench",
+  },
+];
+---
+
+<Layout title="Desarrollo de Software — Agiliza">
+  <Container>
+    <section class="py-16">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold text-[#F15D2D]">Agiliza Soluciones</p>
+        <h1 class="text-3xl font-semibold tracking-tight mt-2">
+          Desarrollo de Software
+        </h1>
+        <p class="mt-4 text-base text-slate-600 max-w-2xl">
+          Sitios web, aplicaciones, portales y automatizaciones construidos con
+          tecnología moderna. Soluciones prácticas, sin sobrediseño, a un costo
+          accesible para PYMEs ecuatorianas.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            href="/contact"
+            class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium bg-[#F15D2D] text-white hover:bg-[#d94f23] transition-colors"
+          >
+            Solicitar cotización
+          </a>
+          <a
+            href="/pricing"
+            class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium border border-[#F15D2D] text-[#F15D2D] hover:bg-[#fff2ed] transition-colors"
+          >
+            Ver precios
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((s) => (
+          <div class="rounded-2xl border border-black/10 p-5 hover:border-[#F15D2D] transition">
+            <div class="flex items-start gap-3">
+              <div class="rounded-xl border border-black/10 p-2">
+                <Icon name={s.icon} class="h-6 w-6 text-[#F15D2D]" />
+              </div>
+              <div>
+                <h2 class="text-base font-semibold">{s.title}</h2>
+                <p class="mt-2 text-sm text-slate-500">{s.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-14 rounded-2xl border border-black/10 p-6 bg-slate-50">
+        <h3 class="text-lg font-semibold">¿No sabes por dónde empezar?</h3>
+        <p class="mt-2 text-sm text-slate-600 max-w-xl">
+          Cuéntame sobre tu negocio y tu objetivo. Te recomiendo la solución más
+          simple que genere resultados reales — sin tecnología innecesaria.
+        </p>
+        <a
+          href="/contact"
+          class="mt-4 inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium border border-[#F15D2D] text-[#F15D2D] hover:bg-[#fff2ed] transition-colors"
+        >
+          Hablemos
+        </a>
+      </div>
+    </section>
+  </Container>
+</Layout>
